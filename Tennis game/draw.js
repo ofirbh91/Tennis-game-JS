@@ -20,21 +20,22 @@ function gameOverScreen(){
     finalTextWidth = canvasContext.measureText(finalText).width;
 
     canvasContext.fillStyle = 'white'
+    
     canvasContext.fillText(text, canvas.width/2 -textWidth/2, canvas.height/2);
     canvasContext.fillText(finalText, canvas.width/2-finalTextWidth/2, 50);
 }
 
 function gameRunningScreen(){
     drawNet();
-    drawRect(0, paddle1pos, PADDLE_WIDTH, PADDLE_HEIGHT, 'white');
-    drawRect(BOARD_WIDTH-PADDLE_WIDTH, paddle2pos, PADDLE_WIDTH, PADDLE_HEIGHT, 'white');
-    drawBall(ballX, ballY, 10, 'white');
+    drawRect(0, paddle1pos, PADDLE_WIDTH, PADDLE_HEIGHT, whiteColor);
+    drawRect(BOARD_WIDTH-PADDLE_WIDTH, paddle2pos, PADDLE_WIDTH, PADDLE_HEIGHT, whiteColor);
+    drawBall(ballX, ballY, 10, whiteColor);
    canvasContext.fillText(player2Score, BOARD_WIDTH-50, 50);
     canvasContext.fillText(player1Score, 50, 50);
 }
 function drawNet(){
     for(var i=0; i<canvas.height; i += 30){
-       drawRect(canvas.width/2, i, 2, 20, 'white')
+       drawRect(canvas.width/2, i, 2, 20, whiteColor)
     }
 }
 function drawEverything(){

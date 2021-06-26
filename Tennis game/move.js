@@ -1,7 +1,8 @@
 function computerPaddleMovement(){
-    if(paddle2pos+PADDLE_HEIGHT/2 < ballY+35){
+    
+    if(paddle2pos+PADDLE_HEIGHT/2 < ballY+COM_PADDLE_SPEED){
         paddle2pos += 4;
-    }if(paddle2pos+PADDLE_HEIGHT/2 > ballY+35 ){
+    }if(paddle2pos+PADDLE_HEIGHT/2 > ballY+COM_PADDLE_SPEED ){
         paddle2pos -= 4;
     }
  }
